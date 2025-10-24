@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Submissions Showcase</title>
+    <link rel="icon" type="image/png" href="https://cdn-icons-png.flaticon.com/512/1087/1087815.png">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Lucide Icons CDN -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <style>
+        /* Use the Inter font family defined in the head */
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        /* Custom scrollbar for a more modern look */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        ::-webkit-scrollbar-track {
+            background: #f1f5f9;
+        }
+        ::-webkit-scrollbar-thumb {
+            background: #64748b;
+            border-radius: 10px;
+        }
+        ::-webkit-scrollbar-thumb:hover {
+            background: #475569;
+        }
+    </style>
+</head>
+<body class="bg-slate-100 antialiased">
+
+    <!-- Main Container -->
+    <div class="container mx-auto px-4 py-8 md:py-16">
+
+        <!-- Header Section -->
+        <header class="text-center mb-10 md:mb-16">
+            <h1 class="text-4xl md:text-5xl font-extrabold text-slate-800 tracking-tight">
+                SNA Activity Submissions (Community Detection)
+            </h1>
+            <p class="mt-3 text-lg md:text-xl text-slate-600 max-w-3xl mx-auto">
+                A curated list of activities, complete with presentation slides and executable code.
+            </p>
+        </header>
+
+        <!-- Grid for Project Cards -->
+        <main id="project-list" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+            <!-- Project cards will be dynamically inserted here by JavaScript -->
+        </main>
+
+        <!-- Footer -->
+        <footer class="text-center mt-16">
+            <p class="text-slate-600">
+                Professor - 
+                <a href="https://www.nitt.edu/home/academics/departments/ca/facultymca/blsundar" target="_blank" rel="noopener noreferrer" class="font-medium text-indigo-600 hover:text-indigo-700 hover:underline">
+                    Dr. S.R. Balasundaram
+                </a>
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        // --- Data for Project Submissions ---
+        // I've added 'codeButton1Text' and 'codeButton2Text' to customize the button labels.
+        const projects = [
+            {
+                name: 'Shubham Yadav',
+                rollNumber: '205124091',
+                topic: 'Edge Betweenness',
+                presentationLink: 'https://docs.google.com/presentation/d/1yoEGwiNy_W34bfVjT_QV44_5Eii931Bp2XbaYGVCG-w/edit?slide=id.p1#slide=id.p1',
+                codeLink1: 'https://colab.research.google.com/drive/1hNaepfW-qAp-WG3hFDplObPA8pIdsozb?usp=sharing',
+                codeButton1Text: 'Run Edge Betweenness',
+                avatar: 'https://media.licdn.com/dms/image/v2/D4E03AQHE-rkIz9ispA/profile-displayphoto-shrink_800_800/B4EZRZsetqHsAg-/0/1736671620762?e=1763596800&v=beta&t=RaGEk9yz4SQ2cm11uWlKOAAdZJ_L8V1ZmyHzx3eagrI'
+            },
+            {
+                name: 'Sohaib Iqbal',
+                rollNumber: '205124093',
+                topic: 'Louvian Algorithm',
+                presentationLink: 'https://docs.google.com/presentation/d/1tD_hnawCrkLqCQn6D8HfLgCw5bobuk5T/edit?usp=sharing&ouid=105076925583125080123&rtpof=true&sd=true',
+                codeLink1: 'https://colab.research.google.com/drive/1MekGIBRzAZftjnKEJntS8FDHueUUTuDf?usp=sharing',
+                codeButton1Text: 'Run Louvian Algorithm',
+                avatar: 'https://media.licdn.com/dms/image/v2/D4D03AQE-6qbUB0RLjA/profile-displayphoto-shrink_400_400/B4DZX3HPM_HsAo-/0/1743607625921?e=1763596800&v=beta&t=QaoLC8Jr-A3R_X38J0MUkzKrxQwH0ljBbK1jy-vrnS4'
+            },
+            {
+                name: 'Sourabh Dubey',
+                rollNumber: '205124095',
+                topic: 'Clique percolation(Community Detection)',
+                presentationLink: 'https://docs.google.com/presentation/d/1gAexTLyE-vbFV36X9SR5spvs8U28MzFl/edit?usp=sharing&ouid=114852589446972830383&rtpof=true&sd=true',
+                codeLink1: 'https://colab.research.google.com/drive/15GaJDn3HoFfwi7PdugIt7LXcgbYW3oOI?usp=sharing',
+                codeButton1Text: 'Run Clique percolation',
+                avatar: 'https://media.licdn.com/dms/image/v2/D4D03AQFlIUBnmqLHjw/profile-displayphoto-shrink_800_800/B4DZQxpiCbHcAc-/0/1735999758958?e=1763596800&v=beta&t=QIXMyXNPzYRmbtUwlPeeCBlykX36_uwJnZTvkxx6NcM'
+            },
+            {
+                name: 'Surajit Das',
+                rollNumber: '205124097',
+                topic: 'Label Propagation',
+                presentationLink: 'https://docs.google.com/presentation/d/1HzhkQ2ZILChPC3waRBIxM3a3msS6lDl8N19c8EHxlJA/edit?usp=sharing',
+                codeLink1: 'https://colab.research.google.com/drive/18jmHVHPNyg8DXMDY_kO18s66j0Ow3y5O?usp=sharing',
+                codeButton1Text: 'Run Label Propagation',
+                avatar: 'https://media.licdn.com/dms/image/v2/D4D03AQFlIUBnmqLHjw/profile-displayphoto-shrink_800_800/B4DZQxpiCbHcAc-/0/1735999758958?e=1763596800&v=beta&t=QIXMyXNPzYRmbtUwlPeeCBlykX36_uwJnZTvkxx6NcM'
+            },
+            {
+                name: 'Tanish Singh',
+                rollNumber: '205124099',
+                topic: 'Walk Trap',
+                presentationLink: 'https://tanish00singh.github.io./sna-ppt/',
+                codeLink1: 'https://tanish00singh.github.io/sna-code/',
+                codeButton1Text: 'Run Walk Trap',
+                avatar: 'https://media.licdn.com/dms/image/v2/D4D03AQFlIUBnmqLHjw/profile-displayphoto-shrink_800_800/B4DZQxpiCbHcAc-/0/1735999758958?e=1763596800&v=beta&t=QIXMyXNPzYRmbtUwlPeeCBlykX36_uwJnZTvkxx6NcM'
+            }
+        ];
+
+        // --- Function to Render Project Cards ---
+        function renderProjects() {
+            const projectListContainer = document.getElementById('project-list');
+            if (!projectListContainer) return;
+
+            // Clear any existing content
+            projectListContainer.innerHTML = '';
+            
+            projects.forEach(project => {
+                const card = `
+                    <div class="bg-white border border-slate-200 rounded-xl shadow-lg hover:shadow-2xl hover:-translate-y-2 transition-all duration-300 ease-in-out overflow-hidden flex flex-col">
+                        <div class="p-6 flex-grow">
+                            <!-- Author Info -->
+                            <div class="flex items-center mb-4">
+                                <img src="${project.avatar}" alt="${project.name}" class="w-12 h-12 rounded-full mr-4 border-2 border-slate-200">
+                                <div>
+                                    <p class="font-bold text-slate-800">${project.name}</p>
+                                    <p class="text-sm text-slate-500 font-mono">${project.rollNumber}</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Topic -->
+                            <h2 class="text-xl font-bold text-slate-900 mb-4 h-16">Topic- 
+                                ${project.topic}
+                            </h2>
+                        </div>
+                        
+                        <!-- Action Buttons: Now a 3-column grid for better layout -->
+                        <div class="bg-slate-50 border-t border-slate-200 px-6 py-4 grid grid-cols-3 gap-3">
+                            <a href="${project.presentationLink}" target="_blank" rel="noopener noreferrer" 
+                               class="flex items-center justify-center gap-2 px-4 py-2.5 text-sm font-semibold text-white bg-indigo-600 rounded-lg shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 transition-colors">
+                                <i data-lucide="clapperboard" class="w-4 h-4"></i>
+                               <span>Click For Presentation</span>
+                            </a>
+                            <a href="${project.codeLink1}" target="_blank" rel="noopener noreferrer" 
+                               class="flex items-center justify-center gap-2 px-4 py-2.5 text-sm font-semibold text-white bg-emerald-600 rounded-lg shadow-sm hover:bg-emerald-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-emerald-500 transition-colors">
+                                <i data-lucide="play-circle" class="w-4 h-4"></i>
+                                <!-- Using the custom button text from the data -->
+                                <span>${project.codeButton1Text}</span>
+                            </a>
+                        </div>
+                    </div>
+                `;
+                projectListContainer.innerHTML += card;
+            });
+            
+            // Initialize Lucide icons after they've been added to the DOM
+            lucide.createIcons();
+        }
+
+        // --- Initial Render ---
+        // Wait for the DOM to be fully loaded before rendering the projects
+        document.addEventListener('DOMContentLoaded', renderProjects);
+
+    </script>
+</body>
+</html>
+
